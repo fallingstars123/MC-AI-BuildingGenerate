@@ -2,6 +2,7 @@ import numpy as np
 import pyvista as pv
 from nbtlib import File, Compound, Int, ByteArray, load
 import re
+import os
 
 # 定义方块类型和子类型映射
 BLOCK_TYPE_MAP = {
@@ -384,8 +385,13 @@ def parse_block(block_str):
     return (block_type, subtype, attr_vector)
 
 def process_block_data(schem_file):
+    # 确保 schem 文件夹存在
+    if not os.path.exists("schem"):
+        os.makedirs("schem")
+    
     # 加载 .schem 文件
-    schem_data = load(schem_file)
+    schem_path = os.path.join("schem", schem_file)
+    schem_data = load(schem_path)
     palette = schem_data['Palette']
     block_data = schem_data['BlockData']
     width = schem_data['Width']
@@ -527,8 +533,13 @@ def generate_rotated_and_mirrored_data():
         for x, y, z, block_type, subtype, *attr_vector in array:
             structure[x, y, z] = [block_type, subtype] + attr_vector
 
-        np.save(output_file + str(i), structure)
-        print(f"✅ 数据成功保存到 {output_file + str(i)}.npy，形状为 {structure.shape}")
+        # 确保 npy 文件夹存在
+        if not os.path.exists("npy"):
+            os.makedirs("npy")
+        
+        # 保存到 npy 文件夹
+        np.save(os.path.join("npy", output_file + str(i)), structure)
+        print(f"✅ 数据成功保存到 npy/{output_file + str(i)}.npy，形状为 {structure.shape}")
 
 def compare_npy_and_txt(npy_file, input_txt, check_file):
     """
@@ -585,7 +596,7 @@ def compare_npy_and_txt(npy_file, input_txt, check_file):
 
 def check_accuracy_of_txt2npy():
     # 比较生成的 .npy 文件和解析后的文本文件
-    npy_file = "block_data_0.npy"  # 替换为你的 .npy 文件路径
+    npy_file = "npy/block_data_0.npy"  # 替换为你的 .npy 文件路径
     input_txt = "parsed_block_data.txt"  # 替换为你的解析后的文本文件路径
     check_file = "check_txt2npy.txt"  # 替换为你的检查结果文件路径
     compare_npy_and_txt(npy_file, input_txt, check_file)
