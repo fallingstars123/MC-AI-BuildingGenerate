@@ -74,7 +74,7 @@ save_as_schem(house_data, "generated_house.schem")
 ```
 python main.py  
 ```  
-访问 `http://localhost:5000/generate`，输入提示词生成建筑。  
+访问 `http://Not_created_yet`，输入提示词生成建筑。  
 
 ---
 
@@ -118,9 +118,7 @@ MC_Building_Generator/
 
 ## 联系信息  
 如有任何问题或建议，请联系：  
-• **邮箱**：your_email@example.com  
-• **GitHub**：[https://github.com/your_username/MC_Building_Generator](https://github.com/your_username/MC_Building_Generator)  
+• **邮箱**：3467025700@qq.com  
+• **GitHub**：[https://github.com/fallingstars123/MC-AI-BuildingGenerate](https://github.com/fallingstars123/MC-AI-BuildingGenerate)  
 
 ---
-
-直接复制以上内容到 `README.md` 文件即可正确显示。确保所有代码块以反引号（```）包裹，标题层级对齐。
