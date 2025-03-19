@@ -87,16 +87,17 @@ Visit `http://Not_created_yet` to generate buildings via prompts.
 ---
 
 ## File Structure  
-```
-MC_Building_Generator/  
-├── main.py                  # Main entry point  
-├── block_data.txt           # Parsed block data  
-├── metadata.txt             # Metadata (dimensions, block IDs)  
-├── block_data_0.npy         # Augmented data (rotated/mirrored)  
-├── generated_house.schem    # Example output  
-├── README.md                # This document  
-```
-
+   ```
+   MC_Building_Generator/
+   ├── schem/                 # put .schem files
+   │   └── WoodHouse_3.schem
+   ├── npy/                   # put .npy files
+   │   └── block_data_0.npy
+   ├── main.py                # Main entry point  
+   ├── block_data.txt         # Parsed block data  
+   ├── metadata.txt           # Metadata (dimensions, block IDs)  
+   └── README.md              # This document
+   ```
 ---
 
 ## Examples  
