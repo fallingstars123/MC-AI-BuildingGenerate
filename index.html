@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ session.lang }}">
+<head>
+    <title>{{ _('welcome') }}</title>
+</head>
+<body>
+    <h1>{{ _('welcome') }}</h1>
+    <button>{{ _('generate_button') }}</button>
+    
+    <!-- 语言切换按钮 -->
+    <a href="/set_language/{{ 'zh' if session.lang == 'en' else 'en' }}">
+        {{ _('language_switch') }}
+    </a>
+</body>
+</html>
