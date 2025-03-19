@@ -602,34 +602,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-from flask import Flask, request, session, render_template
-import json
-import os
-
-app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # 设置安全密钥
-
-# 加载翻译文件
-def load_translations(lang='en'):
-    with open(f'translations/{lang}.json', 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-# 设置默认语言
-@app.before_request
-def set_default_language():
-    if 'lang' not in session:
-        session['lang'] = 'en'  # 默认英文
-
-# 语言切换路由
-@app.route('/set_language/<lang>')
-def set_language(lang):
-    session['lang'] = lang
-    return redirect_back()  # 返回上一页
-
-# 渲染模板时注入翻译
-@app.route('/')
-def index():
-    translations = load_translations(session['lang'])
-    return render_template('index.html', _=translations)
