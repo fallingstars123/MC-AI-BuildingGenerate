@@ -3,7 +3,7 @@
 ## 项目介绍  
 智能MC建筑生成器是一个基于人工智能的工具，能够根据用户输入的提示词（如“平顶”、“深色橡木墙”）自动生成《我的世界》（Minecraft）中的建筑。项目结合了数据增强、3D生成模型和Minecraft数据格式转换技术，支持从单张图像或文本提示词生成10x10x10大小的建筑，并导出为 `.schem` 文件。
 ---
-[🇨🇳 简体中文](Muti_language_Readme/README.zh.md) | [🇬🇧 English](Muti_language_Readme/README.en.md)
+[🇨🇳 简体中文](./README.zh.md) | [🇬🇧 English](./README.en.md)
 ---
 
 ## 主要功能  
