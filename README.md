@@ -5,7 +5,7 @@
 ## Project Overview  
 The Smart MC Building Generator is an AI-powered tool that automatically generates Minecraft structures based on user prompts (e.g., "flat roof", "dark oak walls"). It combines data augmentation, 3D generative models, and Minecraft data format conversion to create 10x10x10 structures from single images or text prompts, exporting them as `.schem` files.
 ---
-[🇨🇳 简体中文](README.zh.md) | [🇬🇧 English](README.en.md)
+[🇨🇳 简体中文](Muti_language_Readme/README.zh.md) | [🇬🇧 English](Muti_language_Readme/README.en.md)
 ---
 
 ## Key Features  
