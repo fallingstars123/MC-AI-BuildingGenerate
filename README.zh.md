@@ -80,15 +80,17 @@ python main.py
 ---
 
 ## 文件结构  
-```
-MC_Building_Generator/  
-├── main.py                  # 主程序  
-├── block_data.txt           # 解析后的方块数据  
-├── metadata.txt             # 元数据  
-├── block_data_0.npy         # 增强后的建筑数据  
-├── generated_house.schem    # 生成的建筑文件  
-├── README.md                # 项目说明  
-```
+   ```
+   MC_Building_Generator/
+   ├── schem/                 # 存放 .schem 文件
+   │   └── WoodHouse_3.schem
+   ├── npy/                   # 存放 .npy 文件
+   │   └── block_data_0.npy
+   ├── main.py                # 主程序
+   ├── block_data.txt         # 解析后的数据
+   ├── metadata.txt           # 元数据
+   └── README.md              # 项目说明
+   ```
 
 ---
 
